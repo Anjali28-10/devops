@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYFW Spring/Summer 2024 Registration</title>
+<link
+href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&d
+isplay=swap" rel="stylesheet">
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: 'Playfair Display', serif;
+color: #fff;
+background-image:
+url('https://media.architecturaldigest.com/photos/56009743cbec99cc0f9f5d1c/master/pass/dam-images-set-design-nyfw-2015-new-york-fashion-week-sets-01.jpg');
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.registration-container {
+background: rgba(0, 0, 0, 0.6);
+padding: 40px;
+border-radius: 15px;
+max-width: 400px;
+width: 100%;
+text-align: center;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.registration-container h1 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+color: #f5d742;
+}
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container input[type="tel"],
+.registration-container input[type="date"],
+.registration-container select {
+width: 100%;
+padding: 15px;
+margin: 10px 0;
+border: none;
+border-radius: 5px;
+background: rgba(255, 255, 255, 0.2);
+color: #fff;
+font-size: 1rem;
+}
+.registration-container select {
+background-color: #555; /* Set this to gray */
+color: #fff; /* Keep text white */
+}
+.registration-container select option {
+background-color: #fff; /* Background color for scroll menu
+options */
+color: #000; /* Text color inside the dropdown */
+}
+.registration-container input[type="submit"] {
+padding: 15px 30px;
+border: none;
+border-radius: 5px;
+background-color: #f5d742;
+color: #000;
+font-size: 1.2rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.registration-container input[type="submit"]:hover {
+background-color: #fff;
+color: #000;
+}
+.designer-icons {
+margin-top: 30px;
+}
+.designer-icons img {
+width: 50px;
+margin: 0 15px;
+}
+/* Placeholder styling */
+::-webkit-input-placeholder {
+color: #fff; /* White placeholder */
+}
+:-ms-input-placeholder {
+color: #fff; /* White placeholder for IE */
+}
+::placeholder {
+color: #fff; /* White placeholder for modern browsers */
+}
+</style>
+</head>
+<body>
+<div class="registration-container">
+<h1>New York Fashion Week 2024</h1>
+<form>
+<input type="text" name="name" placeholder="Your Name"
+required>
+<input type="email" name="email" placeholder="Your Email"
+required>
+<input type="tel" name="phone" placeholder="Your Phone Number"
+required>
+<input type="date" name="attendance-date"
+placeholder="Preferred Attendance Date" required>
+<select name="fashion-week-type" required>
+<option value="" disabled selected>Select Type of Fashion
+Week</option>
+<option value="spring-summer">Spring/Summer</option>
+<option value="autumn-winter">Autumn/Winter</option>
+<option value="resort">Resort</option>
+<option value="bridal">Bridal</option>
+</select>
+<input type="submit" value="Register Now">
+</form>
+<div class="designer-icons">
+</div>
+</div>
+</body>
+</html>
