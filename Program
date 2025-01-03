@@ -1,0 +1,445 @@
+devops internal
+
+
+->cd /c/Users/thole/OneDrive/Desktop/devops
+
+->git init
+-------------------
+Initialized empty Git repository in C:/Users/thole/OneDrive/Desktop/devops/.git/
+
+-> git config --global user.name "Anjali28-10"
+
+-> git config --global user.email "22wh1a05d4@bvrithyderabad.edu.in"
+
+-> git status
+__________________
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Main.class
+        Main.java
+        registration.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+-> git add registration.html
+_________________________________________
+
+-> git commit -m "Add registration.html file"
+___________________________________________________
+
+[master (root-commit) d1ca776] Add registration.html file
+ 1 file changed, 121 insertions(+)
+ create mode 100644 registration.html
+
+
+-> git branch feature-branch
+_____________________________________
+
+-> git checkout feature-branch
+_____________________________________
+
+Switched to branch 'feature-branch'
+
+->git checkout master
+_________________________________
+
+Switched to branch 'master'
+
+-> git merge feature-branch
+_____________________________________
+Already up to date.
+
+-> git remote add origin https://github.com/Anjali28-10/devops.git
+__________________________________________________________________
+
+-> git push origin master
+__________________________________________
+
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.43 KiB | 1.43 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Anjali28-10/devops/pull/new/master
+remote:
+To https://github.com/Anjali28-10/devops.git
+ * [new branch]      master -> master
+
+
+
+-> git pull origin master
+__________________________________
+From https://github.com/Anjali28-10/devops
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+-> git clone https://github.com/Anjali28-10/devops.git
+________________________________________________________
+
+Cloning into 'devops'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), 3.15 MiB | 1.38 MiB/s, done.
+
+
+-> git stash
+__________________
+No local changes to save
+
+-> git log
+____________________
+commit d1ca776b47e5f6af0adc7fb92746afdaebd421a6 (HEAD -> master, origin/master, feature-branch)
+Author: Anjali28-10 <22wh1a05d4@bvrithyderabad.edu.in>
+Date:   Sun Nov 3 20:52:40 2024 +0530
+
+    Add registration.html file
+
+
+
+Jenkins
+__________
+
+
+pipeline
+____________
+
+pipeline{
+  agent any
+
+  stages {
+    stage('Build') {
+      steps{
+        echo 'Building..'
+        }
+      }
+    stage('Test') {
+      steps{
+        echo 'Testing..'
+        }
+      }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying..'
+        }
+      }
+    }
+}
+
+
+registration
+_________________
+
+<!DOCTYPE html>
+<html lang="en"> <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYFW Spring/Summer 2024 Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&d isplay=swap" rel="stylesheet">
+<style> body { margin: 0; padding: 0; font-family: 'Playfair Display', serif; color: #fff; background-image:
+url('https://media.architecturaldigest.com/photos/56009743cbec99cc0f9f5d1c /master/pass/dam-images-set-design-nyfw-2015-new-york-fashion-week-sets-01
+.jpg');
+background-size: cover; background-position: center; height: 100vh; display: flex; justify-content: center; align-items: center;
+}
+.registration-container { background: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 15px; max-width: 400px; width: 100%; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.registration-container h1 { font-size: 2.5rem; margin-bottom: 20px; color: #f5d742;
+}
+.registration-container input[type="text"],
+.registration-container input[type="email"],
+.registration-container input[type="tel"],
+.registration-container input[type="date"],
+.registration-container select { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 5px; background: rgba(255, 255, 255, 0.2); color: #fff; font-size: 1rem;
+}
+.registration-container select { background-color: #555; /* Set this to gray */ color: #fff; /* Keep text white */
+}
+.registration-container select option { background-color: #fff; /* Background color for scroll menu
+options */
+color: #000; /* Text color inside the dropdown */
+}
+.registration-container input[type="submit"] { padding: 15px 30px; border: none; border-radius: 5px; background-color: #f5d742; color: #000; font-size: 1.2rem; cursor: pointer; transition: background-color 0.3s ease;
+}
+.registration-container input[type="submit"]:hover { background-color: #fff; color: #000;
+}
+.designer-icons {
+margin-top: 30px;
+}
+.designer-icons img { width: 50px; margin: 0 15px;
+}
+/* Placeholder styling */
+::-webkit-input-placeholder { color: #fff; /* White placeholder */
+}
+:-ms-input-placeholder { color: #fff; /* White placeholder for IE */
+}
+::placeholder { color: #fff; /* White placeholder for modern browsers */ }
+</style>
+</head>
+<body>
+<div class="registration-container">
+<h1>New York Fashion Week 2024</h1> <form>
+<input type="text" name="name" placeholder="Your Name"
+required>
+<input type="email" name="email" placeholder="Your Email"
+required>
+<input type="tel" name="phone" placeholder="Your Phone Number"
+required>
+<input type="date" name="attendance-date"
+placeholder="Preferred Attendance Date" required>
+<select name="fashion-week-type" required>
+<option value="" disabled selected>Select Type of Fashion Week</option>
+<option value="spring-summer">Spring/Summer</option>
+<option value="autumn-winter">Autumn/Winter</option>
+<option value="resort">Resort</option>
+<option value="bridal">Bridal</option>
+</select>
+<input type="submit" value="Register Now">
+</form>
+<div class="designer-icons">
+</div>
+</div>
+</body>
+</html>
+
+________________________________________
+
+6 th docker commands
+
+C:\Users\admin>docker --version
+
+C:\Users\admin>docker ps --help
+
+C:\Users\admin>docker ps -a
+
+
+C:\Users\admin>docker run -d -p 8081:80 nginx
+
+C:\Users\admin>docker start 1bcb6d281ff4   //no need
+
+C:\Users\admin>docker exec -it 5fa0a4277cc9 bash
+
+root@5fa0a4277cc9:/# nginx -v
+root@5fa0a4277cc9:/# exit
+exit
+
+
+C:\Users\admin>docker logs 5fa0a4277cc9
+
+C:\Users\admin>docker stop 5fa0a4277cc9
+5fa0a4277cc9
+
+C:\Users\admin>docker rm 5fa0a4277cc9
+5fa0a4277cc9
+
+C:\Users\admin>docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+
+C:\Users\admin>docker run -d -p 8081:80 nginx
+caa0446b6f1c7a79b9a587ba960103935b9469b74aa3d9f9833825cb75dd7a20
+
+
+
+C:\Users\admin>docker kill caa0446b6f1c7a79b9a587ba960103935b9469b74aa3d9f9833825cb75dd7a20
+caa0446b6f1c7a79b9a587ba960103935b9469b74aa3d9f9833825cb75dd7a20
+
+
+____________________________________________________________________________________________
+
+7th simple containerized application using docker
+
+. create one folder and keep these 3 files in that folder
+
+requirements.txt
+
+Flask>=2.0
+
+app.py
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
+Dockerfile
+
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed dependencies
+RUN pip install  -r requirements.txt
+
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
+
+# Run the application
+CMD ["python", "app.py"]
+
+now go to command prompt and give that floder path and run these two commands
+
+docker build -t foldername .
+docker run -d -p 5000:5000 foldername
+
+in chrome localhost:5000
+___________________________________________________________________________________________________________
+
+8.integrate kubernets and docker
+
+in command prompt run this command
+
+kubectl get nodes
+
+__________________________________________________________________________________________________________
+
+
+9 th automate the process of running containerized application using Kubernetes
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    demo: "app"
+  name: podtato-main
+  labels:
+    app: podtato-head
+    name: podtato-main
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: podtato-head
+      name: podtato-main
+  template:
+    metadata:
+      labels:
+        app: podtato-head
+        name: podtato-main
+    spec:
+      imagePullSecrets:
+      - name: my-secret
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: kaleoum/podtato-main:v0.1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9000
+        env:
+        - name: PORT
+          value: "9000"
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 9000
+          initialDelaySeconds: 20
+          periodSeconds: 3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: podtato-main
+  labels:
+    app: podtato-head
+    name: podtato-main
+spec:
+  selector:
+    app: podtato-head
+    name: podtato-main
+  ports:
+  - name: http
+    port: 9000
+    protocol: TCP
+    targetPort: 9000
+  type: NodePort
+
+
+save this in deployment.yaml
+
+and run this commands in command prompt
+1 kubectl get ns
+2 kubectl config use-context docker-desktop
+docker pull kaleoum/podtato-main:v0.1.0
+3 kubectl apply -f "C:\Users\aksha\docker-app"
+4 kubectl get po
+5 kubectl port-forward svc/podtato-main 9000:9000
+in chrome localhost:9000
+
+
+_____________________________________________________________________________________________________
+
+10 .install and explore selenium for for automated testing 
+
+
+add external jars in eclipse
+
+_________________________________________________________________________________________________
+
+11. write a simple java script and perform testing using selenium
+
+
+save this folder as test.js and keep it in selenium folder
+
+const { Builder, By, Key, until } = require('selenium-webdriver');
+
+(async function example() {
+    let driver = await new Builder().forBrowser('chrome').build();
+    try {
+        await driver.get('https://www.google.com');
+        let searchBox = await driver.findElement(By.name('q'));
+        await searchBox.sendKeys('Selenium WebDriver', Key.RETURN);
+        await driver.wait(until.titleContains('Selenium WebDriver'), 10000);
+        console.log('Search completed!');
+    } finally {
+        await driver.quit();
+Â Â Â Â }
+})();
+
+
+go to command prompt
+
+first keep the path like this
+C:\Users\aksha>cd C:\Users\aksha\Downloads\selenium-java-4.27.0
+
+
+and run this command    C:\Users\aksha\Downloads\selenium-java-4.27.0>npm init -y
+
+
+C:\Users\aksha\Downloads\selenium-java-4.27.0>npm install selenium-webdriver chromedriver
+
+C:\Users\aksha\Downloads\selenium-java-4.27.0>node test.js
+
+
+__________________________________________________________________________________________________________
+
+12.devoelop testcases for containerized application using selenium
+
+1.docker images
+2.docker pull selenium/standalone-chrome
+3.docker images
+4.docker run -d -p 4444:4444 selenium/standalone-chrome
+
+http://localhost:4444/
+
