@@ -110,6 +110,8 @@ Date:   Sun Nov 3 20:52:40 2024 +0530
 Jenkins
 __________
 
+javac -source 8 -target 8 main2.java
+
 
 pipeline
 ____________
@@ -135,6 +137,23 @@ pipeline{
       }
     }
 }
+
+
+steps  :
+_________
+
+
+1.select pipeline
+2.keep pipeline code in GitHub and copy the the code url
+3.select GitHub option in Jenkins and paste that url
+4.select that GitHub hook
+5.in pipeline ,pipeline script from scm
+6.in scm select git
+7.keep same url in repository url
+8.script path as pipe
+9.in GitHub for ip in webhook add ipv4 address
+build now
+
 
 
 registration
@@ -263,6 +282,7 @@ requirements.txt
 
 Flask>=2.0
 
+
 app.py
 
 from flask import Flask
@@ -275,6 +295,7 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
 Dockerfile
 
@@ -414,7 +435,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
         console.log('Search completed!');
     } finally {
         await driver.quit();
-Â Â Â Â }
+    }
 })();
 
 
@@ -423,13 +444,13 @@ go to command prompt
 first keep the path like this
 C:\Users\aksha>cd C:\Users\aksha\Downloads\selenium-java-4.27.0
 
-
-and run this command    C:\Users\aksha\Downloads\selenium-java-4.27.0>npm init -y
+and run this command   C:\Users\aksha\Downloads\selenium-java-4.27.0>npm init -y
 
 
 C:\Users\aksha\Downloads\selenium-java-4.27.0>npm install selenium-webdriver chromedriver
 
 C:\Users\aksha\Downloads\selenium-java-4.27.0>node test.js
+
 
 
 __________________________________________________________________________________________________________
@@ -442,4 +463,7 @@ ________________________________________________________________________________
 4.docker run -d -p 4444:4444 selenium/standalone-chrome
 
 http://localhost:4444/
+
+
+
 
